@@ -1,4 +1,4 @@
-package ninja.harmless.mad_poi_application_krenn;
+package ninja.harmless.mad;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

@@ -36,8 +36,6 @@ R
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
 P
  app/src/main/AndroidManifest.xml,8/c/8c55c3ccc257e5907959013f99656e4c8ec3903e
-d
-4app/src/main/java/ninja/harmless/mad/MainActivity.kt,d/2/d2caf19d4890525ec348a8e5996fe9170cefbb8d
 <
 build.gradle,f/0/f07866736216be0ee2aba49e392191aeae700a35
 @

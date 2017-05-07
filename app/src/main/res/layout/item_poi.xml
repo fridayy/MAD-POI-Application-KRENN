@@ -4,15 +4,15 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
     <TextView
+            android:id="@+id/poiName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"/>
+
+    <TextView
             android:id="@+id/poiAddress"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Address"/>
-
-    <TextView
-            android:id="@+id/poiCoordinate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Coordinates"/>
 
 </LinearLayout>

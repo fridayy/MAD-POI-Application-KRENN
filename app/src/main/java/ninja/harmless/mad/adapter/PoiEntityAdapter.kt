@@ -22,10 +22,10 @@ class PoiEntityAdapter(context: Context?, resource: Int, objects: MutableList<Po
         }
 
         val poiAddress = newConvertView?.findViewById(R.id.poiAddress) as TextView
-        val poiCoordinates = newConvertView?.findViewById(R.id.poiCoordinate) as TextView
+        val poiName = newConvertView.findViewById(R.id.poiName) as TextView
 
-        poiAddress.setText(entity.address)
-        poiCoordinates.setText(entity.coordinates)
+        poiAddress.text = entity.address
+        poiName.text = entity.name
 
         return newConvertView
     }

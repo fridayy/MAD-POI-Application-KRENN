@@ -1,5 +1,6 @@
 package ninja.harmless.mad.ui
 
+import android.content.Intent
 import android.support.design.widget.Snackbar
 import android.widget.ListView
 import com.orm.SugarContext
@@ -28,6 +29,7 @@ class PoiListActivity : android.support.v7.app.AppCompatActivity() {
         listView.adapter = adapter
 
         handleLongClick(listView, adapter)
+        handleClick(listView, adapter)
         SugarContext.terminate()
     }
 
@@ -42,6 +44,17 @@ class PoiListActivity : android.support.v7.app.AppCompatActivity() {
 
             Snackbar.make(view, "POI Removed!", Snackbar.LENGTH_LONG).show()
             true
+        }
+    }
+
+    private fun handleClick(listView: ListView, adapter: PoiEntityAdapter) {
+        listView.setOnItemClickListener { adapterView, view, i, l ->
+            val intent = Intent(this, PoiDetailActivity::class.java)
+            val clickedItem = adapterView.getItemAtPosition(i) as PoiEntity
+            intent.putExtra("name", clickedItem.name)
+            intent.putExtra("address", clickedItem.address)
+            intent.putExtra("coordinates", clickedItem.coordinates)
+            startActivity(intent)
         }
     }
 }

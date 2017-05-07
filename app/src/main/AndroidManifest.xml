@@ -3,21 +3,29 @@
           xmlns:tools="http://schemas.android.com/tools"
           package="ninja.harmless.mad">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
     <application
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name"
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
-            tools:replace="android:icon"
-            >
+            tools:replace="android:icon">
+        <meta-data
+                android:name="DATABASE"
+                android:value="poi.db"/>
+        <meta-data
+                android:name="VERSION"
+                android:value="22"/>
+        <meta-data
+                android:name="QUERY_LOG"
+                android:value="true"/>
+        <meta-data
+                android:name="DOMAIN_PACKAGE_NAME"
+                android:value="ninja.harmless.mad.persistence"/>
 
-        <meta-data android:name="DATABASE" android:value="poi.db" />
-        <meta-data android:name="VERSION" android:value="2" />
-        <meta-data android:name="QUERY_LOG" android:value="true" />
-        <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="ninja.harmless.mad.persistence" />
-
-        <activity android:name="ninja.harmless.mad.ui.MainActivity">
+        <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -25,11 +33,13 @@
             </intent-filter>
         </activity>
         <activity
-                android:name="ninja.harmless.mad.ui.PoiListActivity"
+                android:name=".ui.PoiListActivity"
                 android:label="@string/title_activity_poi_list"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
-        <activity android:name="ninja.harmless.mad.ui.AddPoiActivity">
+        <activity android:name=".ui.AddPoiActivity">
+        </activity>
+        <activity android:name=".ui.PoiDetailActivity">
         </activity>
     </application>
 

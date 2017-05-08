@@ -7,5 +7,5 @@
         tools:showIn="@layout/activity_poi_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="ninja.harmless.mad.ui.PoiListActivity">
+        tools:context="ninja.harmless.mad.ui.ListActivity">
 </ListView>

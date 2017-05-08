@@ -32,4 +32,22 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"
             android:onClick="switchToAddActivity"/>
+
+    <TextView
+            android:text="Instructions: Enable GPS. When clicking on ADD POI Coordinates and Address resolutions should be done automatically"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="86dp"
+            android:id="@+id/textView"
+            android:layout_below="@+id/PoiList"
+            android:layout_centerHorizontal="true"/>
+
+    <TextView
+            android:text="Within in MY POIS list click shoirt for Details or Click long to delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="31dp"
+            android:id="@+id/textView2"/>
 </RelativeLayout>

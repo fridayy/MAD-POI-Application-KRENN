@@ -8,14 +8,16 @@ import com.orm.SugarRecord;
 public class PoiEntity extends SugarRecord {
     private String name;
     private String address;
-    private String coordinates;
+    private String lon;
+    private String lat;
 
     public PoiEntity() {}
 
-    public PoiEntity(String name, String address, String coordinates) {
+    public PoiEntity(String name, String address, String lon, String lat) {
         this.name = name;
         this.address = address;
-        this.coordinates = coordinates;
+        this.lon = lon;
+        this.lat = lat;
     }
 
     public String getName() {
@@ -34,12 +36,20 @@ public class PoiEntity extends SugarRecord {
         this.address = address;
     }
 
-    public String getCoordinates() {
-        return coordinates;
+    public String getLon() {
+        return lon;
     }
 
-    public void setCoordinates(String coordinates) {
-        this.coordinates = coordinates;
+    public void setLon(String lon) {
+        this.lon = lon;
+    }
+
+    public String getLat() {
+        return lat;
+    }
+
+    public void setLat(String lat) {
+        this.lat = lat;
     }
 
     @Override

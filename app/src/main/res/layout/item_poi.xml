@@ -7,12 +7,14 @@
             android:id="@+id/poiName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Name"/>
+            android:text="Name"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"/>
 
     <TextView
             android:id="@+id/poiAddress"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Address"/>
+            android:text="Address"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"/>
 
 </LinearLayout>

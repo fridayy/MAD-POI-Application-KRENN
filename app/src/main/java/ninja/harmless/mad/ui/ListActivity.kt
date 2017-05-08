@@ -9,7 +9,7 @@ import ninja.harmless.mad.adapter.PoiEntityAdapter
 import ninja.harmless.mad.common.Assert
 import ninja.harmless.mad.persistence.PoiEntity
 
-class PoiListActivity : android.support.v7.app.AppCompatActivity() {
+class ListActivity : android.support.v7.app.AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: android.os.Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,11 +49,12 @@ class PoiListActivity : android.support.v7.app.AppCompatActivity() {
 
     private fun handleClick(listView: ListView, adapter: PoiEntityAdapter) {
         listView.setOnItemClickListener { adapterView, view, i, l ->
-            val intent = Intent(this, PoiDetailActivity::class.java)
+            val intent = Intent(this, DetailsActivity::class.java)
             val clickedItem = adapterView.getItemAtPosition(i) as PoiEntity
             intent.putExtra("name", clickedItem.name)
             intent.putExtra("address", clickedItem.address)
-            intent.putExtra("coordinates", clickedItem.coordinates)
+            intent.putExtra("lon", clickedItem.lon)
+            intent.putExtra("lat", clickedItem.lat)
             startActivity(intent)
         }
     }

@@ -8,12 +8,12 @@ class MainActivity : android.support.v7.app.AppCompatActivity() {
     }
 
     fun switchToListActivity(view: android.view.View?) {
-        val intent = android.content.Intent(this, PoiListActivity::class.java)
+        val intent = android.content.Intent(this, ListActivity::class.java)
         startActivity(intent)
     }
 
     fun switchToAddActivity(view: android.view.View?) {
-        val intent = android.content.Intent(this, AddPoiActivity::class.java)
+        val intent = android.content.Intent(this, AddActivity::class.java)
         startActivity(intent)
     }
 }

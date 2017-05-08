@@ -4,6 +4,7 @@
           package="ninja.harmless.mad">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
             android:allowBackup="true"
@@ -17,7 +18,7 @@
                 android:value="poi.db"/>
         <meta-data
                 android:name="VERSION"
-                android:value="22"/>
+                android:value="25"/>
         <meta-data
                 android:name="QUERY_LOG"
                 android:value="true"/>
@@ -33,13 +34,15 @@
             </intent-filter>
         </activity>
         <activity
-                android:name=".ui.PoiListActivity"
+                android:name=".ui.ListActivity"
                 android:label="@string/title_activity_poi_list"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
-        <activity android:name=".ui.AddPoiActivity">
+        <activity android:name=".ui.AddActivity"
+                android:label="Add a POI">
         </activity>
-        <activity android:name=".ui.PoiDetailActivity">
+        <activity android:name=".ui.DetailsActivity"
+                android:label="POI Details">
         </activity>
     </application>
 
